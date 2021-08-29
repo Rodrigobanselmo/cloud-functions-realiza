@@ -1,0 +1,34 @@
+// /* eslint-disable @typescript-eslint/no-unused-vars */
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// /* eslint-disable max-len */
+// import * as functions from "firebase-functions";
+// import * as admin from "firebase-admin";
+// // import {Storage} from "@google-cloud/storage";
+// // const gcs = new Storage();
+// const db = admin.firestore();
+// const st = admin.storage();
+
+
+// export const resizeAvatar = functions.storage.object().onFinalize(async (object) => {
+//   const fileBucket = object.bucket; // The Storage bucket that contains the file.
+//   const filePath = object.name; // File path in the bucket.
+//   const contentType = object.contentType; // File content type.
+//   const metageneration = object.metageneration; // Number of times metadata has been generated. New objects have a value of 1.
+//   console.log("fileBucket", filePath);
+//   console.log("fileBucket", object.metadata);
+
+//   if (!filePath?.includes("profile") || !object.metadata?.resizedImage) return null;
+//   const userRef = db.doc("teste/image");
+//   const url = await st.bucket;
+
+//   return await userRef.set({
+//     filePath, contentType, metageneration, fileBucket, metadata: object.metadata,
+//     url: filePath.replace("profile/", ""),
+//     urlSt: url,
+//   });
+
+//   // st.ref("profile").child(uid).getDownloadURL().then((url) => {
+//   //   console.log("fileBucket", filePath);
+//   // }).catch((error) => {
+//   // });
+// });
